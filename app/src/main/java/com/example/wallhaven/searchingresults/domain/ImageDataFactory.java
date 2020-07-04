@@ -1,4 +1,4 @@
-package com.example.wallhaven.search;
+package com.example.wallhaven.searchingresults.domain;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;

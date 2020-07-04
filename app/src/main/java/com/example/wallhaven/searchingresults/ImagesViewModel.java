@@ -1,4 +1,4 @@
-package com.example.wallhaven.Activities;
+package com.example.wallhaven.searchingresults;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Transformations;
@@ -6,13 +6,16 @@ import androidx.lifecycle.ViewModel;
 import androidx.paging.LivePagedListBuilder;
 import androidx.paging.PagedList;
 
+import com.example.wallhaven.searchingresults.model.Image;
+import com.example.wallhaven.searchingresults.model.NetworkState;
+
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 public class ImagesViewModel extends ViewModel {
     private Executor executor;
     private LiveData<NetworkState> networkStateLiveData;
-    private LiveData<PagedList<ListImage>> imageLiveData;
+    private LiveData<PagedList<Image>> imageLiveData;
 
     public ImagesViewModel() {
         init();
@@ -33,7 +36,7 @@ public class ImagesViewModel extends ViewModel {
                 .build();
     }
 
-    public LiveData<PagedList<ListImage>> getImages(){
+    public LiveData<PagedList<Image>> getImages(){
         return imageLiveData;
     }
 

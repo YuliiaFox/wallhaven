@@ -1,4 +1,4 @@
-package com.example.wallhaven.Activities.network.model;
+package com.example.wallhaven.searchingresults.network.model;
 
 public class MetaDTO {
     public String seed;

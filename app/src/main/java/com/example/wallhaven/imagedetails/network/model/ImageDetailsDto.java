@@ -1,6 +1,6 @@
 package com.example.wallhaven.imagedetails.network.model;
 
-public class DtoImageDetails {
+public class ImageDetailsDto {
 
     private Data data;
 

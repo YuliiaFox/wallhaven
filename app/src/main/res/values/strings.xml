@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">wallhaven</string>
+    <string name="category_label">Category: %1$s</string>
+    <string name="ratio_label">Ratio: %1$s</string>
+    <string name="resolution_label">Resolution: %1$s</string>
+    <string name="file_size_label">Size: %1$s</string>
+    <string name="search_by_tags_hint">Enter at least 3 symbols</string>
 </resources>
