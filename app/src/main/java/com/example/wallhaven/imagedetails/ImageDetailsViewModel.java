@@ -20,6 +20,7 @@ public class ImageDetailsViewModel extends ViewModel {
     NetworkClient networkClient;
     ImageDetailsConverter converter;
 
+    //TODO: PROVIDE IMAGE ID THROUGH ImageDetailsViewModel CONSTRUCTOR
     public ImageDetailsViewModel() {
         imageDetailsMutableLiveData = new MutableLiveData<>();
         networkClient = new NetworkClient();

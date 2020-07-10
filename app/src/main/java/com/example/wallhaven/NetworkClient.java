@@ -1,7 +1,8 @@
 package com.example.wallhaven;
 
+import com.example.wallhaven.filters.network.AutocompleteAPI;
 import com.example.wallhaven.imagedetails.network.ImageDetailsAPI;
-import com.example.wallhaven.searchingresults.network.ImageAPI;
+import com.example.wallhaven.results.network.ImageAPI;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -64,4 +65,9 @@ public class NetworkClient {
     public ImageDetailsAPI getImageDetails() {
         return retrofit.create(ImageDetailsAPI.class);
     }
+
+    public AutocompleteAPI getSuggestedTags() {
+        return retrofit.create(AutocompleteAPI.class);
+    }
+
 }

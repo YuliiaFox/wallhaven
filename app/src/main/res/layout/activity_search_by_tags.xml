@@ -3,10 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView
+
+    <EditText
         android:id="@+id/tag_input"
+        android:hint="@string/enter_at_least_4_symbols"
         android:layout_width="match_parent"
         android:layout_height="50sp"
+        android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tag_suggestions"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,5 +24,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tag_input"
         />
+
+    <TextView
+        android:id="@+id/no_tags_were_found_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:gravity="center|bottom"
+        android:visibility="invisible"
+        android:text="@string/no_tags_found"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tag_suggestions"
+        app:layout_constraintTop_toBottomOf="@id/tag_input" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

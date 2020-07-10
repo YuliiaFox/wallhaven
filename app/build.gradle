@@ -62,4 +62,7 @@ dependencies {
     // https://mvnrepository.com/artifact/commons-io/commons-io
     implementation group: 'commons-io', name: 'commons-io', version: '2.6'
 
+    implementation 'com.google.android.material:material:1.0.0-beta01'
+
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
 }

@@ -8,8 +8,9 @@ public class ImageDetails {
     private String category;
     private int views;
     private int fileSize;
+    private String tags;
 
-    public ImageDetails(String url, String ratio, String resolution, String category, int views, int fileSize, String path) {
+    public ImageDetails(String url, String ratio, String resolution, String category, int views, int fileSize, String path, String tags) {
         this.url = url;
         this.ratio = ratio;
         this.resolution = resolution;
@@ -17,6 +18,7 @@ public class ImageDetails {
         this.views = views;
         this.fileSize = fileSize;
         this.path = path;
+        this.tags = tags;
     }
 
     public String getRatio() {
@@ -46,4 +48,10 @@ public class ImageDetails {
     public String getPath() {
         return path;
     }
+
+
+    public String getTags() {
+        return tags;
+    }
+
 }

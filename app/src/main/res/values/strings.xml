@@ -2,7 +2,11 @@
     <string name="app_name">wallhaven</string>
     <string name="category_label">Category: %1$s</string>
     <string name="ratio_label">Ratio: %1$s</string>
+    <string name="tags_label">Tags: %1$s</string>
     <string name="resolution_label">Resolution: %1$s</string>
     <string name="file_size_label">Size: %1$s</string>
-    <string name="search_by_tags_hint">Enter at least 3 symbols</string>
+    <string name="search_by_tags_hint">Enter tag here</string>
+    <string name="enter_at_least_4_symbols">Enter at least 4 symbols</string>
+    <string name="no_tags_found">No tags found</string>
+    <string name="search">search</string>
 </resources>
