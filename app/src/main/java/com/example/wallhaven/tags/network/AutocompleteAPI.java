@@ -1,6 +1,6 @@
-package com.example.wallhaven.filters.network;
+package com.example.wallhaven.tags.network;
 
-import com.example.wallhaven.filters.network.model.AutocompleteSuggestions;
+import com.example.wallhaven.tags.network.model.AutocompleteSuggestions;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

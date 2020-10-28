@@ -1,4 +1,4 @@
-package com.example.wallhaven.filters.recyclerview;
+package com.example.wallhaven.tags.recyclerview;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wallhaven.R;
-import com.example.wallhaven.filters.model.Tag;
+import com.example.wallhaven.tags.model.Tag;
 
 import java.util.ArrayList;
 import java.util.List;

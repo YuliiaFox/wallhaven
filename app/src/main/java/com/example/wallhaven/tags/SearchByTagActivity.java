@@ -1,4 +1,4 @@
-package com.example.wallhaven.filters;
+package com.example.wallhaven.tags;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,8 +15,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wallhaven.R;
-import com.example.wallhaven.filters.recyclerview.TagSuggestionAdapter;
-import com.example.wallhaven.results.model.Tag;
+import com.example.wallhaven.results.model.SearchParameters;
+import com.example.wallhaven.tags.recyclerview.TagSuggestionAdapter;
 
 public class SearchByTagActivity extends AppCompatActivity {
     public static final String TAG = "tag";
@@ -40,7 +40,7 @@ public class SearchByTagActivity extends AppCompatActivity {
             String tagId = adapter.getElementByPosition(position).getId();
             String name = adapter.getElementByPosition(position).getValue();
             Intent returnIntent = new Intent();
-            Tag tag = new Tag(tagId, name);
+            SearchParameters tag = new SearchParameters(tagId, name);
             returnIntent.putExtra(TAG, tag);
             setResult(Activity.RESULT_OK, returnIntent);
             finish();

@@ -1,13 +1,13 @@
-package com.example.wallhaven.filters;
+package com.example.wallhaven.tags;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.wallhaven.NetworkClient;
-import com.example.wallhaven.filters.domain.Converter;
-import com.example.wallhaven.filters.model.Tag;
-import com.example.wallhaven.filters.network.model.AutocompleteSuggestions;
+import com.example.wallhaven.tags.domain.Converter;
+import com.example.wallhaven.tags.model.Tag;
+import com.example.wallhaven.tags.network.model.AutocompleteSuggestions;
 
 import java.util.List;
 import java.util.Objects;

@@ -9,4 +9,5 @@
     <string name="enter_at_least_4_symbols">Enter at least 4 symbols</string>
     <string name="no_tags_found">No tags found</string>
     <string name="search">search</string>
+    <string name="filters">filters</string>
 </resources>

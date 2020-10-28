@@ -1,4 +1,4 @@
-package com.example.wallhaven.filters.network.model;
+package com.example.wallhaven.tags.network.model;
 
 import java.util.List;
 

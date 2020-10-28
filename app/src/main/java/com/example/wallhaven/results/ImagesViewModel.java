@@ -10,10 +10,10 @@ import androidx.lifecycle.Transformations;
 import androidx.lifecycle.ViewModel;
 import androidx.paging.PagedList;
 
-import com.example.wallhaven.filters.domain.TagIdConverter;
 import com.example.wallhaven.results.domain.ImageDataSource;
 import com.example.wallhaven.results.model.Image;
-import com.example.wallhaven.results.model.Tag;
+import com.example.wallhaven.results.model.SearchParameters;
+import com.example.wallhaven.tags.domain.TagIdConverter;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -24,7 +24,7 @@ import java.util.concurrent.Executors;
 public class ImagesViewModel extends ViewModel {
     private Executor executor;
     private LiveData<PagedList<Image>> imageLiveData;
-    private MutableLiveData<List<Tag>> tagIdsLiveData = new MutableLiveData<>();
+    private MutableLiveData<List<SearchParameters>> tagIdsLiveData = new MutableLiveData<>();
 
     public ImagesViewModel() {
         init();
@@ -38,9 +38,10 @@ public class ImagesViewModel extends ViewModel {
                     .setEnablePlaceholders(false)
                     .setInitialLoadSizeHint(2)
                     .setPageSize(24).build();
-            TagIdConverter converter = new TagIdConverter();
 
+            TagIdConverter converter = new TagIdConverter();
             ImageDataSource dataSource = new ImageDataSource(converter.convert(tags));
+
             return new PagedList.Builder<>(dataSource, pagedListConfig)
                     .setFetchExecutor(executor)
                     .setNotifyExecutor(new Executor() {
@@ -56,23 +57,28 @@ public class ImagesViewModel extends ViewModel {
         tagIdsLiveData.postValue(new LinkedList<>());
     }
 
-    public LiveData<PagedList<Image>> getImages() {
+    LiveData<PagedList<Image>> getImages() {
         return imageLiveData;
     }
 
-    public LiveData<List<Tag>> getTags() {
+    public LiveData<List<SearchParameters>> getTags() {
         return tagIdsLiveData;
     }
 
-    public void loadDataWithNewTag(@Nullable final Tag tag) {
-        List<Tag> tags = tagIdsLiveData.getValue();
+    void loadDataWithNewTag(@Nullable final SearchParameters tag) {
+        List<SearchParameters> tags = tagIdsLiveData.getValue();
         Objects.requireNonNull(tags).add(tag);
         tagIdsLiveData.postValue(tags);
     }
 
-    public void refreshDataWithoutTag(Tag tag) {
-        List<Tag> tags = tagIdsLiveData.getValue();
+    void refreshDataWithoutTag(SearchParameters tag) {
+        List<SearchParameters> tags = tagIdsLiveData.getValue();
         Objects.requireNonNull(tags).remove(tag);
+        tagIdsLiveData.postValue(tags);
+    }
+
+    void refreshDataWithSameTags() {
+        List<SearchParameters> tags = tagIdsLiveData.getValue();
         tagIdsLiveData.postValue(tags);
     }
 }

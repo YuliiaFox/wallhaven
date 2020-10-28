@@ -10,6 +10,6 @@ import retrofit2.http.Query;
 
 public interface ImageAPI {
 
-    @GET("api/v1/search")
+    @GET("api/v1/search?sorting=random")
     Call<ImageResponseDTO> getImagesWithRandomSorting(@Query("page") Long page, @Query("q") List<String> tagId);
 }

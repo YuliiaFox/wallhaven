@@ -1,8 +1,8 @@
 package com.example.wallhaven;
 
-import com.example.wallhaven.filters.network.AutocompleteAPI;
 import com.example.wallhaven.imagedetails.network.ImageDetailsAPI;
 import com.example.wallhaven.results.network.ImageAPI;
+import com.example.wallhaven.tags.network.AutocompleteAPI;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

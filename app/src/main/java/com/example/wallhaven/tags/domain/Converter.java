@@ -1,7 +1,7 @@
-package com.example.wallhaven.filters.domain;
+package com.example.wallhaven.tags.domain;
 
-import com.example.wallhaven.filters.model.Tag;
-import com.example.wallhaven.filters.network.model.AutocompleteSuggestions;
+import com.example.wallhaven.tags.model.Tag;
+import com.example.wallhaven.tags.network.model.AutocompleteSuggestions;
 
 import java.util.List;
 import java.util.stream.Collectors;

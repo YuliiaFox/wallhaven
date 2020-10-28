@@ -1,4 +1,4 @@
-package com.example.wallhaven.filters.recyclerview;
+package com.example.wallhaven.tags.recyclerview;
 
 import android.view.View;
 import android.widget.TextView;
@@ -6,7 +6,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.wallhaven.filters.model.Tag;
+import com.example.wallhaven.tags.model.Tag;
 
 public class SuggestedTagViewHolder extends RecyclerView.ViewHolder {
     private TextView tagView;

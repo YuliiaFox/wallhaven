@@ -1,4 +1,4 @@
-package com.example.wallhaven.filters.model;
+package com.example.wallhaven.tags.model;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;

@@ -2,7 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/search_button"
+        android:id="@+id/filters_button"
+        android:icon="@drawable/baseline_filter_alt_black_18dp"
+        android:title="@string/filters"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/search_by_tags_button"
         android:icon="@drawable/baseline_search_black_48"
         android:title="@string/search"
         app:showAsAction="ifRoom" />

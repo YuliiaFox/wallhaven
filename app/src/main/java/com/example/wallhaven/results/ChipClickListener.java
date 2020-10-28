@@ -3,13 +3,13 @@ package com.example.wallhaven.results;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.wallhaven.results.model.Tag;
+import com.example.wallhaven.results.model.SearchParameters;
 
 public class ChipClickListener implements View.OnClickListener {
     ImagesViewModel viewModel;
-    Tag tag;
+    SearchParameters tag;
 
-    public ChipClickListener(ImagesViewModel viewModel, Tag tag) {
+    public ChipClickListener(ImagesViewModel viewModel, SearchParameters tag) {
         this.viewModel = viewModel;
         this.tag = tag;
     }
